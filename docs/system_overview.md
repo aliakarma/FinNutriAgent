@@ -37,11 +37,11 @@ FinAgent consists of five main modules:
 ---
 
 ## 2. Data Flow
--financial_data → Budget Agent → weekly budget
--nutrition_requirements → Nutrition Agent → nutrient targets
--food_composition → Optimizer → feasible food options
--food_prices → Price Agent → triggers re-planning
--LLM → integrates all outputs → final meal plan
+- financial_data → Budget Agent → weekly budget
+- nutrition_requirements → Nutrition Agent → nutrient targets
+- food_composition → Optimizer → feasible food options
+- food_prices → Price Agent → triggers re-planning
+- LLM → integrates all outputs → final meal plan
 
 
 ---
