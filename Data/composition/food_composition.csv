@@ -1,0 +1,351 @@
+ food_id , food_name , calories_per_100g , protein_g , vitamin_d_mcg , iron_mg , halal 
+ F001 , Chicken Breast ,165,31,0.1,1.3, Yes 
+ F002 , Lentils ,116,9,0,3.3, Yes 
+ F003 , Chocolate ,550,5.5,2,8.3, Yes 
+ F004 , Fried Butter ,1017,0.8,1.4,0, Yes 
+ F005 , Steamed Kale ,43,3.9,0,1.5, Yes 
+ F006 , Steamed Green Beans ,30,1.9,0,1.1, Yes 
+ F007 , Fried Turkey Breast ,173,32,0,1.1, Yes 
+ F008 , Baked Duck ,325,18.5,0.1,2.3, Yes 
+ F009 , Sunflower Seeds ,637,21.8,0,6.1, Yes 
+ F010 , Potato Chips ,493,7.6,0,1.7, Yes 
+ F011 , Boiled Sweet Potato ,89,1.7,0,0.6, Yes 
+ F012 , Seasoned Chicken Thigh ,199,25,0.2,1.5, Yes 
+ F013 , Baked Cashews ,562,19.4,0,7.6, Yes 
+ F014 , Fried Greek Yogurt ,82,10.8,0,0.1, Yes 
+ F015 , Tuna ,141,27.8,1.7,1.1, Yes 
+ F016 , Grilled Grapes ,79,0.7,0,0.4, Yes 
+ F017 , Roasted Mackerel ,322,20.3,17.9,1.9, Yes 
+ F018 , Roasted Walnuts ,716,13.6,0,3.2, Yes 
+ F019 , Strawberries ,31,0.7,0,0.4, Yes 
+ F020 , Roasted Chicken Wings ,227,30.2,0.1,1.3, Yes 
+ F021 , Cauliflower ,23,2.1,0,0.4, Yes 
+ F022 , Boiled Watermelon ,26,0.6,0,0.2, Yes 
+ F023 , Wine ,90,0.1,0,0.3, No 
+ F024 , Fried Blueberries ,82,0.7,0,0.4, Yes 
+ F025 , Fried Salmon ,263,19.4,10.4,0.3, Yes 
+ F026 , Spicy Lamb Chop ,321,25.2,0.1,2.2, Yes 
+ F027 , Spicy Whole Wheat Bread ,229,13.1,0,4.3, Yes 
+ F028 , Bell Pepper ,31,1.1,0,0.4, Yes 
+ F029 , Boiled Pasta ,116,5,0,1.1, Yes 
+ F030 , Spicy Ground Beef ,323,14.3,0,2.8, Yes 
+ F031 , Baked Onion ,42,1,0,0.2, Yes 
+ F032 , Spicy Oats ,415,17.2,0,4.4, Yes 
+ F033 , Burger (Beef) ,255,12.7,0.1,2.4, Yes 
+ F034 , Turkey Breast ,136,27.3,0,1.1, Yes 
+ F035 , Cashews ,565,16.7,0,6.1, Yes 
+ F036 , Organic Sausage (Pork) ,320,12,0.5,1, No 
+ F037 , Spicy Kale ,48,4.1,0,1.6, Yes 
+ F038 , Roasted Pineapple ,50,0.5,0,0.3, Yes 
+ F039 , Boiled Cauliflower ,22,1.8,0,0.5, Yes 
+ F040 , Seasoned Sardines ,205,23.3,5.1,2.9, Yes 
+ F041 , Steamed Chicken Wings ,197,32.6,0.1,1.3, Yes 
+ F042 , Boiled Lentils ,117,9.5,0,3.4, Yes 
+ F043 , Tuna (Var 3) ,119,29.6,2,1, Yes 
+ F044 , Organic Crab ,104,19,0,0.5, Yes 
+ F045 , Grilled Corn Tortilla ,234,6.5,0,1.6, Yes 
+ F046 , Grilled Broccoli ,37,2.5,0,0.8, Yes 
+ F047 , Organic Shrimp ,100,23.3,0.1,0.5, Yes 
+ F048 , Organic Cauliflower ,22,1.7,0,0.5, Yes 
+ F049 , Baked Bell Pepper ,32,0.9,0,0.4, Yes 
+ F050 , Spicy Pasta ,136,4.6,0,1.1, Yes 
+ F051 , Boiled Lentils (Var 3) ,106,9,0,3.6, Yes 
+ F052 , Grilled Lentils ,124,9.5,0,3.5, Yes 
+ F053 , Boiled Peanuts ,584,26.8,0,5.2, Yes 
+ F054 , Steamed Peanuts ,568,28.1,0,5.1, Yes 
+ F055 , Organic Bacon ,568,34.3,0.5,1.4, No 
+ F056 , Steamed Sausage (Pork) ,282,11.8,0.5,1.2, No 
+ F057 , Baked Mango ,63,0.8,0,0.2, Yes 
+ F058 , Seasoned Cheddar Cheese ,441,27.4,0.6,0.8, Yes 
+ F059 , Seasoned Sweet Potato ,92,1.7,0,0.7, Yes 
+ F060 , Burger (Beef) (Var 3) ,240,13.9,0.1,2.3, Yes 
+ F061 , Baked Sweet Potato ,88,1.6,0,0.6, Yes 
+ F062 , Boiled Quinoa ,124,4.2,0,1.5, Yes 
+ F063 , Organic Bacon (Var 6) ,587,37.7,0.4,1.5, No 
+ F064 , Lobster ,84,17.7,0,0.3, Yes 
+ F065 , Spicy Kale (Var 1) ,50,4.5,0,1.4, Yes 
+ F066 , Roasted Quinoa ,126,4.8,0,1.6, Yes 
+ F067 , Black Beans ,126,9.3,0,2, Yes 
+ F068 , Boiled Pineapple ,50,0.5,0,0.3, Yes 
+ F069 , Seasoned Onion ,39,1.1,0,0.2, Yes 
+ F070 , Fried Quinoa ,169,4.6,0,1.6, Yes 
+ F071 , Grilled Kale ,55,4,0,1.4, Yes 
+ F072 , Organic Grapes ,63,0.7,0,0.4, Yes 
+ F073 , Fried Sausage (Pork) ,412,11.6,0.5,1.1, No 
+ F074 , Grilled Sweet Potato ,90,1.5,0,0.6, Yes 
+ F075 , Sausage (Pork) ,271,12,0.5,1, No 
+ F076 , Baked Cauliflower ,24,1.8,0,0.4, Yes 
+ F077 , Donut ,487,5,0.2,1.8, Yes 
+ F078 , Roasted Broccoli ,35,2.7,0,0.8, Yes 
+ F079 , Spicy White Bread ,266,8.2,0,3.3, Yes 
+ F080 , Spicy Zucchini ,17,1.1,0,0.4, Yes 
+ F081 , Potato Chips (Var 6) ,545,6.8,0,1.6, Yes 
+ F082 , Grilled Sausage (Pork) ,316,11.9,0.6,1, No 
+ F083 , Boiled White Bread ,235,8.1,0,3.8, Yes 
+ F084 , Cauliflower (Var 2) ,26,2.1,0,0.5, Yes 
+ F085 , Boiled Sunflower Seeds ,557,19.8,0,4.8, Yes 
+ F086 , Baked Lentils ,107,9.7,0,3.9, Yes 
+ F087 , Steamed White Bread ,250,8.8,0,4.1, Yes 
+ F088 , Steamed Crab ,83,17.5,0,0.6, Yes 
+ F089 , Burger (Beef) (Var 1) ,234,11.8,0.1,2.3, Yes 
+ F090 , Grilled Zucchini ,17,1.2,0,0.5, Yes 
+ F091 , Walnuts ,627,15.7,0,2.9, Yes 
+ F092 , Greek Yogurt ,53,10.4,0,0.1, Yes 
+ F093 , Cashews (Var 5) ,527,18.7,0,6.2, Yes 
+ F094 , Seasoned Lamb Chop ,306,27.5,0.1,1.9, Yes 
+ F095 , Baked Sunflower Seeds ,637,19,0,5.3, Yes 
+ F096 , Fried Lamb Chop ,407,23.7,0.1,2.1, Yes 
+ F097 , Wine (Var 9) ,79,0.1,0,0.3, No 
+ F098 , Grapes ,71,0.7,0,0.4, Yes 
+ F099 , Roasted Beef Liver ,148,21.7,1.4,6.2, Yes 
+ F100 , Steamed Greek Yogurt ,52,9.8,0,0.1, Yes 
+ F101 , Grilled Almonds ,654,22.6,0,3.6, Yes 
+ F102 , Steamed Turkey Breast ,116,32.8,0,1.1, Yes 
+ F103 , Steamed Orange ,40,0.8,0,0.1, Yes 
+ F104 , Seasoned Carrot ,42,0.9,0,0.3, Yes 
+ F105 , Roasted Brown Rice ,129,2.7,0,0.4, Yes 
+ F106 , Seasoned Lamb Chop (Var 9) ,290,24.4,0.1,1.7, Yes 
+ F107 , Grilled Walnuts ,657,15.6,0,2.9, Yes 
+ F108 , Fried Crab ,129,19.2,0,0.5, Yes 
+ F109 , Spicy French Fries ,321,3.5,0,0.8, Yes 
+ F110 , Grilled Crab ,104,18.4,0,0.5, Yes 
+ F111 , Baked Pasta ,144,4.6,0,1.1, Yes 
+ F112 , Spinach ,22,3,0,2.6, Yes 
+ F113 , Roasted Pork Chop ,245,28.3,0.7,1.1, No 
+ F114 , Seasoned Onion (Var 5) ,41,1.1,0,0.2, Yes 
+ F115 , Baked Avocado ,147,1.9,0,0.7, Yes 
+ F116 , Steamed Butter ,659,0.9,1.4,0, Yes 
+ F117 , Roasted Cauliflower ,28,1.9,0,0.4, Yes 
+ F118 , Fried Cauliflower ,35,1.9,0,0.4, Yes 
+ F119 , Boiled Lentils (Var 8) ,114,8.2,0,3.5, Yes 
+ F120 , Steamed Bell Pepper ,29,1,0,0.4, Yes 
+ F121 , Roasted Egg ,161,13.1,2.3,1.2, Yes 
+ F122 , Steamed Apple ,47,0.3,0,0.1, Yes 
+ F123 , Roasted Onion ,45,1.2,0,0.2, Yes 
+ F124 , Fried Sweet Potato ,122,1.5,0,0.7, Yes 
+ F125 , Grilled Cashews ,597,19,0,7.6, Yes 
+ F126 , Cod ,80,16.5,0.8,0.4, Yes 
+ F127 , Roasted Banana ,98,1.2,0,0.3, Yes 
+ F128 , Seasoned Sunflower Seeds ,579,21.8,0,6.1, Yes 
+ F129 , Baked Strawberries ,33,0.7,0,0.4, Yes 
+ F130 , Roasted Grapes ,82,0.7,0,0.4, Yes 
+ F131 , Baked Brown Rice ,111,2.5,0,0.4, Yes 
+ F132 , Orange ,47,0.8,0,0.1, Yes 
+ F133 , Baked Corn Tortilla ,225,5.9,0,1.4, Yes 
+ F134 , Roasted Egg (Var 8) ,156,14.1,2.4,1.2, Yes 
+ F135 , Potato Chips (Var 9) ,506,7.3,0,1.6, Yes 
+ F136 , Beer ,44,0.5,0,0, No 
+ F137 , Seasoned Quinoa ,113,4.1,0,1.5, Yes 
+ F138 , Boiled Mango ,56,0.8,0,0.2, Yes 
+ F139 , Boiled Butter ,749,0.8,1.7,0, Yes 
+ F140 , Burger (Beef) (Var 9) ,230,13.9,0.1,2.2, Yes 
+ F141 , Roasted Almonds ,615,22.3,0,3.6, Yes 
+ F142 , Steamed Ham ,149,21.8,0.2,1.4, No 
+ F143 , Organic Whole Wheat Bread ,267,12.9,0,3.4, Yes 
+ F144 , Spicy Chicken Breast ,172,31.6,0.1,1, Yes 
+ F145 , Chocolate (Var 4) ,599,5.1,2.2,8.5, Yes 
+ F146 , Roasted Cottage Cheese ,113,12,0,0.1, Yes 
+ F147 , Baked Mozzarella ,302,25.9,0.3,0.5, Yes 
+ F148 , Fried Beef Liver ,187,19.7,1.1,6.5, Yes 
+ F149 , Pizza (Pepperoni) ,259,11.8,0.2,2.3, No 
+ F150 , Grilled Beef Steak ,273,26.2,0,3.1, Yes 
+ F151 , Bagel ,258,9.3,0,3.1, Yes 
+ F152 , Organic Pasta ,121,5.4,0,1.3, Yes 
+ F153 , Pizza (Cheese) ,246,11,0.2,2.5, Yes 
+ F154 , Seasoned Turkey Breast ,144,29.4,0,1.2, Yes 
+ F155 , Fried Brown Rice ,159,2.8,0,0.4, Yes 
+ F156 , Baked Black Beans ,136,9.6,0,2.3, Yes 
+ F157 , Boiled Chickpeas ,162,8.7,0,2.6, Yes 
+ F158 , Spicy Crab ,104,18.7,0,0.5, Yes 
+ F159 , Spicy Mushrooms ,22,3.2,0.2,0.5, Yes 
+ F160 , Seasoned Ground Beef ,337,15.1,0,2.8, Yes 
+ F161 , Boiled White Bread (Var 9) ,275,9,0,3.4, Yes 
+ F162 , Spicy Sausage (Pork) ,307,11.3,0.6,1.2, No 
+ F163 , Organic White Rice ,117,2.5,0,0.2, Yes 
+ F164 , Fried Shrimp ,138,26.2,0.1,0.6, Yes 
+ F165 , Bagel (Var 1) ,250,10.3,0,3, Yes 
+ F166 , Chicken Thigh ,223,27.9,0.2,1.5, Yes 
+ F167 , Fried Whole Wheat Bread ,330,12.6,0,3.6, Yes 
+ F168 , Steamed Pasta ,122,5.2,0,1.3, Yes 
+ F169 , Organic Pineapple ,47,0.5,0,0.4, Yes 
+ F170 , Organic Watermelon ,27,0.6,0,0.2, Yes 
+ F171 , Fried Greek Yogurt (Var 1) ,85,9.9,0,0.1, Yes 
+ F172 , Spicy Whole Milk ,61,3.4,1.4,0, Yes 
+ F173 , Fried Sweet Potato (Var 2) ,110,1.6,0,0.7, Yes 
+ F174 , Steamed Strawberries ,31,0.8,0,0.4, Yes 
+ F175 , Baked Grapes ,65,0.6,0,0.4, Yes 
+ F176 , Grilled Ground Beef ,373,15.1,0,2.3, Yes 
+ F177 , Ice Cream (Var 3) ,199,3.4,0.1,0.1, Yes 
+ F178 , Bacon ,589,35.9,0.4,1.3, No 
+ F179 , Organic Lamb Chop (Var 5) ,317,26.7,0.1,1.8, Yes 
+ F180 , Seasoned Greek Yogurt ,62,9.3,0,0.1, Yes 
+ F181 , Steamed Cod ,79,18,0.8,0.4, Yes 
+ F182 , Steamed Walnuts ,675,15.6,0,3, Yes 
+ F183 , Ice Cream (Var 4) ,208,3.5,0.1,0.1, Yes 
+ F184 , Pizza (Pepperoni) (Var 4) ,280,12.8,0.2,3, No 
+ F185 , Roasted Bell Pepper (Var 7) ,33,1.1,0,0.4, Yes 
+ F186 , Steamed Skim Milk ,33,3.1,1.2,0, Yes 
+ F187 , Roasted Ham (Var 4) ,158,22.2,0.2,1.6, No 
+ F188 , Roasted Banana ,104,1,0,0.3, Yes 
+ F189 , Grilled Bacon ,512,37.9,0.4,1.5, No 
+ F190 , Seasoned Ground Beef ,308,15.1,0,2.6, Yes 
+ F191 , Organic Spinach ,20,2.8,0,3.2, Yes 
+ F192 , Seasoned Banana ,91,1.1,0,0.3, Yes 
+ F193 , Boiled Tuna ,136,30.8,1.9,1.1, Yes 
+ F194 , Boiled Grapes ,63,0.7,0,0.4, Yes 
+ F195 , Boiled Mozzarella ,255,26,0.3,0.4, Yes 
+ F196 , Roasted Crab ,107,20,0,0.6, Yes 
+ F197 , Burger (Beef) (Var 2) ,274,12.7,0.1,2.3, Yes 
+ F198 , Spicy Whole Wheat Bread ,255,13.3,0,3.8, Yes 
+ F199 , Seasoned Cottage Cheese ,92,10.9,0,0.1, Yes 
+ F200 , Roasted Cauliflower ,28,2.1,0,0.4, Yes 
+ F201 , Organic Carrot (Var 5) ,38,0.9,0,0.3, Yes 
+ F202 , Roasted Beef Liver ,148,19.8,1.1,6.6, Yes 
+ F203 , Strawberries (Var 6) ,34,0.7,0,0.4, Yes 
+ F204 , Grilled Chickpeas ,172,9.5,0,3, Yes 
+ F205 , Fried Lobster ,125,19.2,0,0.3, Yes 
+ F206 , Cashews (Var 2) ,585,17,0,7.1, Yes 
+ F207 , Steamed Cheddar Cheese ,383,23.5,0.7,0.8, Yes 
+ F208 , Spicy Bacon ,587,39.7,0.4,1.3, No 
+ F209 , Asparagus ,18,2.1,0,2.4, Yes 
+ F210 , Organic Carrot (Var 7) ,38,0.9,0,0.3, Yes 
+ F211 , Baked Green Beans ,32,1.9,0,1, Yes 
+ F212 , Steamed Cheddar Cheese (Var 3) ,394,26.8,0.6,0.7, Yes 
+ F213 , Grilled Oats ,374,16.3,0,5.5, Yes 
+ F214 , Steamed Corn Tortilla ,214,5.7,0,1.5, Yes 
+ F215 , Roasted Cheddar Cheese ,433,24.2,0.7,0.7, Yes 
+ F216 , Boiled Cashews ,572,16.3,0,6.5, Yes 
+ F217 , Grilled White Bread ,269,9.4,0,4, Yes 
+ F218 , Spicy Spinach ,22,2.8,0,3.2, Yes 
+ F219 , Spicy Cod (Var 7) ,79,19.7,0.9,0.4, Yes 
+ F220 , Baked Zucchini ,17,1.2,0,0.4, Yes 
+ F221 , Roasted Chia Seeds (Var 7) ,481,18.2,0,7.2, Yes 
+ F222 , Grilled Duck ,361,17.6,0.1,2.5, Yes 
+ F223 , Roasted Cottage Cheese ,107,11,0,0.1, Yes 
+ F224 , Steamed Shrimp ,94,23.4,0.1,0.6, Yes 
+ F225 , Organic Tomato ,16,1,0,0.3, Yes 
+ F226 , Pizza (Cheese) (Var 8) ,243,10.9,0.2,2.5, Yes 
+ F227 , Organic Tuna (Var 2) ,125,26.6,1.6,1.1, Yes 
+ F228 , Ice Cream (Var 9) ,193,3.3,0.1,0.1, Yes 
+ F229 , Grilled Walnuts (Var 5) ,668,14.1,0,3.4, Yes 
+ F230 , Roasted Turkey Breast (Var 5) ,161,29.5,0,1.1, Yes 
+ F231 , Orange ,48,1,0,0.1, Yes 
+ F232 , Chocolate (Var 1) ,497,4.6,2,8.8, Yes 
+ F233 , Fried Crab ,126,17.2,0,0.6, Yes 
+ F234 , Steamed Mushrooms (Var 4) ,21,2.9,0.2,0.6, Yes 
+ F235 , Spicy Green Beans ,32,1.8,0,1, Yes 
+ F236 , Fried Greek Yogurt ,84,10.2,0,0.1, Yes 
+ F237 , Baked Ham ,151,20,0.2,1.5, No 
+ F238 , Baked Chicken Thigh ,221,24.8,0.2,1.5, Yes 
+ F239 , Wine (Var 7) ,86,0.1,0,0.3, No 
+ F240 , Grilled Pasta ,126,4.8,0,1.4, Yes 
+ F241 , Grilled Apple ,59,0.3,0,0.1, Yes 
+ F242 , Roasted Potato ,79,2.2,0,0.9, Yes 
+ F243 , Roasted Turkey Breast (Var 7) ,138,32.7,0,1.1, Yes 
+ F244 , Steamed Beef Liver (Var 2) ,137,19.9,1.2,7.2, Yes 
+ F245 , Steamed Cheddar Cheese (Var 5) ,358,23.7,0.5,0.8, Yes 
+ F246 , Roasted Banana (Var 9) ,91,1.1,0,0.3, Yes 
+ F247 , Spicy Beef Steak ,273,24.5,0,2.4, Yes 
+ F248 , Roasted Pasta ,157,4.6,0,1.2, Yes 
+ F249 , Organic Walnuts ,714,14.4,0,2.8, Yes 
+ F250 , Grilled Sausage (Pork) ,291,11.7,0.6,1, No 
+ F251 , Spicy Beef Steak (Var 4) ,251,27.3,0,3, Yes 
+ F252 , Wine (Var 2) ,79,0.1,0,0.4, No 
+ F253 , Boiled Sunflower Seeds ,582,20.9,0,5.7, Yes 
+ F254 , Steamed Mackerel (Var 1) ,297,18.9,14.9,1.7, Yes 
+ F255 , Grilled Greek Yogurt (Var 7) ,57,10,0,0.1, Yes 
+ F256 , Baked Bacon ,570,36.7,0.4,1.5, No 
+ F257 , Tomato (Var 6) ,17,1,0,0.3, Yes 
+ F258 , Fried Mackerel (Var 8) ,443,17.5,15.3,1.4, Yes 
+ F259 , Organic Carrot (Var 2) ,44,0.9,0,0.3, Yes 
+ F260 , Black Beans ,130,9.4,0,2, Yes 
+ F261 , Roasted Ground Beef ,381,14.4,0,2.2, Yes 
+ F262 , Almonds ,618,21.7,0,3.8, Yes 
+ F263 , Grilled Black Beans ,135,8.7,0,2.1, Yes 
+ F264 , Grilled Chia Seeds ,531,15.5,0,7.2, Yes 
+ F265 , Seasoned Ham (Var 4) ,135,21.4,0.2,1.6, No 
+ F266 , Baked Pineapple ,50,0.5,0,0.3, Yes 
+ F267 , Baked Tuna ,126,29.7,2,1, Yes 
+ F268 , Seasoned Watermelon ,31,0.6,0,0.2, Yes 
+ F269 , Sunflower Seeds ,619,19.2,0,5.3, Yes 
+ F270 , Steamed Cashews ,492,19.8,0,6.8, Yes 
+ F271 , Seasoned Kale (Var 6) ,49,4.4,0,1.6, Yes 
+ F272 , Beer (Var 7) ,46,0.5,0,0, No 
+ F273 , French Fries ,282,3.7,0,0.8, Yes 
+ F274 , Roasted Oats ,415,17.1,0,4.8, Yes 
+ F275 , Roasted Salmon ,219,21,12.6,0.3, Yes 
+ F276 , Burger (Beef) (Var 3) ,255,11.7,0.1,2.3, Yes 
+ F277 , Potato Chips ,495,6.7,0,1.8, Yes 
+ F278 , Boiled White Bread ,242,8.5,0,3.3, Yes 
+ F279 , Fried Chicken Thigh ,282,26.8,0.2,1.4, Yes 
+ F280 , Steamed Zucchini ,16,1.2,0,0.4, Yes 
+ F281 , Organic Lamb Chop (Var 2) ,282,24.8,0.1,2, Yes 
+ F282 , Baked Oats ,389,16.8,0,5.2, Yes 
+ F283 , Seasoned Crab ,100,18.5,0,0.5, Yes 
+ F284 , Seasoned Broccoli ,35,2.5,0,0.8, Yes 
+ F285 , Fried Asparagus ,30,2.3,0,2.2, Yes 
+ F286 , Ice Cream (Var 2) ,198,3.4,0.1,0.1, Yes 
+ F287 , Spicy Ham ,143,19.2,0.2,1.4, No 
+ F288 , Baked Chicken Breast ,172,31.5,0.1,1.1, Yes 
+ F289 , Roasted Banana (Var 5) ,106,1.1,0,0.3, Yes 
+ F290 , Beer (Var 9) ,40,0.5,0,0, No 
+ F291 , Roasted White Rice ,149,2.8,0,0.2, Yes 
+ F292 , Grilled Onion ,38,1.2,0,0.2, Yes 
+ F293 , Organic Chickpeas ,174,9.5,0,2.8, Yes 
+ F294 , Boiled Chicken Wings (Var 1) ,176,27.6,0.1,1.2, Yes 
+ F295 , Boiled Tomato ,18,0.9,0,0.3, Yes 
+ F296 , Fried Cod ,120,18.5,1,0.4, Yes 
+ F297 , Boiled Orange ,45,0.9,0,0.1, Yes 
+ F298 , Baked Chia Seeds (Var 1) ,462,16.6,0,8.6, Yes 
+ F299 , Roasted Sausage (Pork) ,342,11.2,0.5,1.1, No 
+ F300 , Organic Pineapple ,47,0.5,0,0.3, Yes 
+ F301 , Ice Cream (Var 7) ,223,3.8,0.1,0.1, Yes 
+ F302 , Pizza (Cheese) (Var 6) ,252,11.9,0.2,2.9, Yes 
+ F303 , Baked Whole Wheat Bread ,263,12.8,0,3.4, Yes 
+ F304 , Fried Lentils ,172,8.1,0,3.4, Yes 
+ F305 , Organic Whole Milk (Var 8) ,55,3.2,1.2,0, Yes 
+ F306 , Beef Liver ,122,19.3,1.2,7.5, Yes 
+ F307 , Seasoned Spinach ,22,2.7,0,2.5, Yes 
+ F308 , Spicy Butter ,694,1,1.8,0, Yes 
+ F309 , Beef Liver (Var 3) ,135,21.3,1.1,7, Yes 
+ F310 , Steamed Chicken Breast (Var 2) ,164,29.9,0.1,1.1, Yes 
+ F311 , Ice Cream (Var 1) ,222,3.5,0.1,0.1, Yes 
+ F312 , Organic Bacon ,575,36.3,0.4,1.5, No 
+ F313 , Baked Chia Seeds (Var 4) ,459,18,0,8.8, Yes 
+ F314 , Potato Chips (Var 2) ,532,7,0,1.5, Yes 
+ F315 , Roasted Onion ,41,1.1,0,0.2, Yes 
+ F316 , Steamed Cottage Cheese ,84,10.1,0,0.1, Yes 
+ F317 , Seasoned Sunflower Seeds ,614,22.6,0,4.8, Yes 
+ F318 , Boiled Bacon ,553,35.4,0.4,1.3, No 
+ F319 , Fried Butter ,1102,0.9,1.8,0, Yes 
+ F320 , Baked Mackerel (Var 6) ,330,18.7,16.1,1.8, Yes 
+ F321 , Baked Mackerel (Var 8) ,298,17.6,14.6,1.8, Yes 
+ F322 , Burger (Beef) (Var 4) ,265,12.7,0.1,2.3, Yes 
+ F323 , Seasoned Chicken Thigh ,216,27.2,0.2,1.3, Yes 
+ F324 , Grilled Pineapple (Var 5) ,55,0.5,0,0.3, Yes 
+ F325 , Grilled Chickpeas (Var 9) ,175,9.7,0,2.8, Yes 
+ F326 , Baked White Rice ,141,2.7,0,0.2, Yes 
+ F327 , Roasted Pineapple (Var 3) ,52,0.5,0,0.3, Yes 
+ F328 , Fried Cauliflower ,32,2,0,0.4, Yes 
+ F329 , Grilled Skim Milk (Var 6) ,37,3.5,1.5,0, Yes 
+ F330 , Salmon ,227,19.2,12.1,0.3, Yes 
+ F331 , Organic French Fries ,328,3.6,0,0.7, Yes 
+ F332 , Seasoned Shrimp (Var 9) ,107,22.7,0.1,0.6, Yes 
+ F333 , Fried Ham (Var 1) ,208,19,0.2,1.6, No 
+ F334 , Fried Lentils (Var 4) ,170,8.6,0,3.3, Yes 
+ F335 , Fried Quinoa (Var 3) ,168,4.2,0,1.4, Yes 
+ F336 , Grilled White Bread (Var 5) ,285,9.8,0,3.7, Yes 
+ F337 , Spicy Kale ,47,4.7,0,1.5, Yes 
+ F338 , Baked Orange (Var 9) ,49,1,0,0.1, Yes 
+ F339 , Steamed Potato ,71,2.2,0,0.7, Yes 
+ F340 , Seasoned Brown Rice ,117,2.6,0,0.4, Yes 
+ F341 , Baked Chicken Wings ,192,27.7,0.1,1.1, Yes 
+ F342 , Fried Avocado ,226,2,0,0.6, Yes 
+ F343 , Boiled Chicken Wings (Var 6) ,207,28,0.1,1.1, Yes 
+ F344 , Fried Broccoli ,52,2.8,0,0.8, Yes 
+ F345 , Grilled Ground Beef (Var 1) ,338,12.7,0,2.6, Yes 
+ F346 , Potato Chips (Var 8) ,575,6.4,0,1.9, Yes 
+ F347 , Baked Quinoa ,120,4.5,0,1.6, Yes 
+ F348 , Potato Chips (Var 3) ,581,7.6,0,1.5, Yes 
+ F349 , Spicy Mozzarella ,292,30.6,0.3,0.4, Yes 
+ F350 , Cheddar Cheese ,380,27,0.6,0.7, Yes 
