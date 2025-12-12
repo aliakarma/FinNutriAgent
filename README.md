@@ -1,102 +1,126 @@
 # Dataset Documentation
 
-This document provides a comprehensive description of all datasets included in the repository.  
-All datasets are synthetic but modeled on **foods commonly consumed in Saudi Arabia**, along with relevant nutritional and health-related fields.
+This document provides detailed descriptions of all datasets included in the repository.  
+All datasets are synthetic and designed for research involving nutrition analytics, dietary modeling, affordability analysis, and personalized nutrition planning.
 
 ---
 
-## 1. Purpose of the Datasets
+## 1. Dataset Overview
 
-The datasets in this repository are designed to support research in:
+The repository contains the following datasets:
 
-- **Nutritional analytics**  
-- **Diet recommendation systems**  
-- **AI/ML models for food classification and calorie prediction**  
-- **Public health studies related to common Saudi dietary patterns**  
-- **Data preprocessing, visualization, and model benchmarking**
+1. **financial_data** – 101 rows × 8 columns  
+2. **food_composition** – 351 rows × 7 columns  
+3. **food_prices** – 351 rows × 4 columns  
+4. **nutrition_requirements** – 501 rows × 7 columns  
 
-All datasets approximate realistic values but do **not** contain real personal information, ensuring they are fully safe for academic and open-source use.
-
----
-
-## 2. Dataset Overview
-
-### 2.1 `food_items_sa.csv`
-
-A synthetic dataset listing common food items eaten in Saudi Arabia.
-
-| Attribute | Description |
-|----------|-------------|
-| `food_id` | Unique identifier (integer) |
-| `name` | Name of the food item |
-| `category` | Food category (Rice, Meat, Bread, Dessert, etc.) |
-| `cuisine_origin` | Saudi, Yemeni, Levantine, Indian, etc. |
-| `typical_consumption` | Typical serving size eaten (grams) |
-| `calories_per_100g` | Calorie value per 100g |
-| `is_traditional` | Indicates if the dish is traditionally Saudi (yes/no) |
-
-- **Rows**: 20  
-- **Columns**: 7  
-- **Source**: Fully synthetic; values modeled on public nutrition tables.
+Each dataset is described in detail below.
 
 ---
 
-### 2.2 `nutrition_values_sa.csv`
-
-Provides nutritional breakdown for foods listed in `food_items_sa.csv`.
-
-| Attribute | Description |
-|----------|-------------|
-| `food_id` | Foreign key referencing the food item |
-| `protein_g` | Protein per 100g |
-| `carbs_g` | Carbohydrates per 100g |
-| `fat_g` | Fat per 100g |
-| `fiber_g` | Fiber per 100g |
-| `sodium_mg` | Sodium content |
-| `sugar_g` | Sugar content |
-
-- **Rows**: 20  
-- **Columns**: 7  
-- **Source**: Synthetic; ranges based on standard GCC nutrition sources.
+## 2. Dataset Descriptions
 
 ---
 
-### 2.3 `meal_patterns_sa.csv`
+## 2.1 `financial_data`
 
-Represents common meal combinations in Saudi Arabia.
+A synthetic dataset representing household or individual-level monthly financial capacity.  
+Useful for affordability modeling, diet planning under budget constraints, and socioeconomic correlation analysis.
 
-| Attribute | Description |
-|----------|-------------|
-| `meal_id` | Unique identifier |
-| `meal_name` | Breakfast, Lunch, Dinner, Snack |
-| `main_food_id` | Primary food item ID |
-| `side_food_id` | Secondary or side dish item |
-| `avg_consumption_g` | Average total grams consumed |
-| `occasion` | Daily meal, weekend, Ramadan, etc. |
+### Fields
 
-- **Rows**: 12  
-- **Columns**: 6  
-- **Source**: Synthetic; based on typical Saudi dietary habits.
+| Field | Description |
+|-------|-------------|
+| `user_id` | Unique identifier for a synthetic user |
+| `monthly_income` | Total income per month (numeric) |
+| `rent` | Monthly rent cost |
+| `utilities` | Cost of electricity, water, and other basic utilities |
+| `transport` | Monthly transportation expenses |
+| `education` | Monthly educational expenses |
+| `healthcare` | Monthly healthcare spending |
+| `savings_target` | Amount user tries to save per month |
+
+### Shape
+- **Rows:** 101  
+- **Columns:** 8  
+
+### Source
+- Synthetic; no real financial or personal data.
 
 ---
 
-### 2.4 `user_health_profiles.csv` (Optional Synthetic Dataset)
+## 2.2 `food_composition`
 
-Useful for training recommendation models.
+A database of foods with macronutrients and essential micronutrients.  
+Useful for nutrition calculations, dietary planning, and fundamental nutrient analysis.
 
-| Attribute | Description |
-|----------|-------------|
-| `user_id` | Unique synthetic user ID |
+### Fields
+
+| Field | Description |
+|-------|-------------|
+| `food_id` | Unique identifier for each food item |
+| `food_name` | Name of the food (single ingredient or composite) |
+| `calories_per_100g` | Calories per 100 grams |
+| `protein_g` | Protein content per 100g |
+| `vitamin_d_mcg` | Vitamin D content (micrograms) |
+| `iron_mg` | Iron content (milligrams) |
+| `halal` | Indicates if the food is halal (yes/no) |
+
+### Shape
+- **Rows:** 351  
+- **Columns:** 7  
+
+### Source
+- Synthetic but based on common food composition values.
+
+---
+
+## 2.3 `food_prices`
+
+Daily or periodic market price dataset for food items.  
+Useful for cost optimization, price trend analysis, and economic modeling.
+
+### Fields
+
+| Field | Description |
+|-------|-------------|
+| `food_id` | Foreign key referencing `food_composition` |
+| `store` | Store name or category (supermarket, local market, etc.) |
+| `price_per_kg` | Price per kilogram in local currency |
+| `date` | Date of price record |
+
+### Shape
+- **Rows:** 351  
+- **Columns:** 4  
+
+### Source
+- Fully synthetic; modeled after typical retail food price structures.
+
+---
+
+## 2.4 `nutrition_requirements`
+
+Personalized daily nutrient requirements for different synthetic individuals.  
+Useful for personalized meal planning, diet recommendation systems, and nutrition modeling.
+
+### Fields
+
+| Field | Description |
+|-------|-------------|
+| `person_id` | Unique synthetic person identifier |
 | `age` | Age in years |
 | `gender` | Male/Female |
-| `height_cm` | Height |
-| `weight_kg` | Weight |
-| `activity_level` | Sedentary, Moderate, Active |
-| `preferred_food_category` | Rice, Meat, Bread, Dessert, etc. |
+| `calories_kcal` | Daily caloric requirement |
+| `protein_g` | Daily protein requirement |
+| `vitamin_d_mcg` | Daily Vitamin D requirement |
+| `iron_mg` | Daily iron requirement |
 
-- **Rows**: 25  
-- **Columns**: 7  
-- **Source**: Fully synthetic; no real personal data.
+### Shape
+- **Rows:** 501  
+- **Columns:** 7  
+
+### Source
+- Synthetic; based on widely used nutrient requirement ranges.
 
 ---
 
@@ -104,12 +128,10 @@ Useful for training recommendation models.
 
 All datasets are:
 
-- **Fully synthetic**
-- Modeled on public nutritional references from GCC food consumption patterns
-- Free of personal or sensitive information
-- Created specifically for **research**, **AI model development**, and **academic use**
-
-No web scraping or real-person data is included.
+- Fully **synthetic**  
+- Contain **no personal or sensitive real-world data**  
+- Generated for academic and analytical model development  
+- Suitable for machine learning, statistical modeling, and reproducible research  
 
 ---
 
@@ -119,17 +141,6 @@ All datasets in this repository are released under:
 
 **Creative Commons Attribution 4.0 International (CC BY 4.0)**
 
-You are free to:
+You may share, remix, adapt, and build upon the data with proper attribution.
 
-- Share
-- Adapt
-- Build upon
-
-As long as appropriate credit is given.
-
----
-
-## 5. Citation
-
-If you use these datasets in your research, please cite the repository:
 
