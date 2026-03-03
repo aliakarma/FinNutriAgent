@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/1115326129.svg)](https://doi.org/10.5281/zenodo.18849993)
+
 # FinAgent: Agentic AI for Household Nutrition and Budgeting
 
 FinAgent is an agentic AI system that jointly optimizes household meal planning and budgets using:
