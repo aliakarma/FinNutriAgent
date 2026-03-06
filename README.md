@@ -345,13 +345,13 @@ FinNutriAgent/
 If you use FinNutriAgent in your research, please cite:
 
 ```bibtex
-@software{akarma2025finnutriagent,
-  author    = {Ali Akarma},
+@software{syedfinagent2026,
+  author    = {Toqeer Ali Syed, Abdulaziz Alshahrani, Ali Akarma, Sohail Khan, Muhammad Nauman, It Ee Lee, Salman Jan and Ali Ullah},
   title     = {{FinNutriAgent: Agentic AI for Household Nutrition and Budget Optimization}},
-  year      = {2025},
-  publisher = {Zenodo},
-  doi       = {10.5281/zenodo.18849993},
-  url       = {https://doi.org/10.5281/zenodo.18849993}
+  year      = {2026},
+  publisher = {Engineering, Technology & Applied Science Research},
+  doi       = {},
+  url       = {}
 }
 ```
 
