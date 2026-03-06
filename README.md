@@ -219,6 +219,16 @@ python scripts/reproduce_results.py
 
 This produces `results/summary.csv`, `results/summary_stats.json`, and a sample output for household `U017`.
 
+### Quick budget sensitivity evaluation
+
+To quickly measure how the optimizer behaves under a fixed weekly budget, run:
+
+```bash
+python scripts/evaluate_budget.py
+```
+
+This evaluates a single example household (U017) with a 500 SAR weekly budget and prints the cost/utilization and selected foods.
+
 ---
 
 ## Results Summary
