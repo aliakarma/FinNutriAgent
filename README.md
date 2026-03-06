@@ -104,9 +104,9 @@ The system is evaluated on a **synthetic dataset** reflecting realistic conditio
 ## 🏗️ System Architecture
 
 ```
-┌──────────────────────────────────────────────────────────────┐
-│                      LLM Orchestrator                        │
-│          (Coordinates agents · Generates explanations)       │
+┌─────────────────────────────────────────────────────────────┐
+│                      LLM Orchestrator                       │
+│          (Coordinates agents · Generates explanations)      │
 └────────┬─────────────────┬──────────────────┬───────────────┘
          │                 │                  │
    ┌─────▼──────┐   ┌──────▼──────┐   ┌──────▼──────┐
@@ -116,8 +116,8 @@ The system is evaluated on a **synthetic dataset** reflecting realistic conditio
    │ financial  │   │ nutrition_  │   │ food_prices │
    │ _data.csv  │   │ req.csv     │   │ .csv        │
    └─────┬──────┘   └──────┬──────┘   └──────┬──────┘
-         │                 │                  │
-         └─────────────────▼──────────────────┘
+         │                 │                 │
+         └─────────────────▼─────────────────┘
                     ┌───────────────┐
                     │  MILP Engine  │
                     │   (PuLP/CBC)  │
