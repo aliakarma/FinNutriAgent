@@ -1,42 +1,294 @@
-# FinNutriAgent: Agentic AI for Household Nutrition and Budget Optimization
+<div align="center">
 
+<!-- LOGO / BANNER -->
+<img src="https://raw.githubusercontent.com/aliakarma/FinNutriAgent/main/docs/assets/banner.png" alt="FinNutriAgent Banner" width="100%" onerror="this.style.display='none'"/>
+
+<h1>
+  🥗💰 FinNutriAgent
+</h1>
+
+<h3><em>Agentic AI for Household Nutrition and Budget Optimization</em></h3>
+
+<br/>
+
+<!-- BADGES ROW 1 — Identity & Citation -->
 [![DOI](https://zenodo.org/badge/1115326129.svg)](https://doi.org/10.5281/zenodo.18849993)
-[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/Code-MIT-green.svg)](LICENSE)
+[![License: CC BY 4.0](https://img.shields.io/badge/Data%20%26%20Docs-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![ORCID](https://img.shields.io/badge/ORCID-0009--0002--6687--9380-a6ce39?logo=orcid&logoColor=white)](https://orcid.org/0009-0002-6687-9380)
+
+<!-- BADGES ROW 2 — Tech Stack -->
+[![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/downloads/)
+[![PuLP](https://img.shields.io/badge/Optimizer-PuLP%2FCBC-orange)](https://coin-or.github.io/pulp/)
+[![LLM Powered](https://img.shields.io/badge/LLM-Orchestrated-blueviolet?logo=openai&logoColor=white)](#system-architecture)
+[![MILP](https://img.shields.io/badge/Method-MILP-blue)](#milp-problem-formulation)
+
+<!-- BADGES ROW 3 — Quality & CI -->
+[![CI](https://img.shields.io/github/actions/workflow/status/aliakarma/FinNutriAgent/ci.yml?label=CI&logo=github)](https://github.com/aliakarma/FinNutriAgent/actions)
+[![Tests](https://img.shields.io/badge/Tests-pytest-yellow?logo=pytest&logoColor=white)](tests/)
+[![Code Style](https://img.shields.io/badge/Code%20Style-PEP8-black)](https://peps.python.org/pep-0008/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg)](CONTRIBUTING.md)
+
+<br/>
+
+<!-- CTA BUTTONS -->
+<a href="https://colab.research.google.com/github/aliakarma/FinNutriAgent/blob/main/example/demo_finagent.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" height="28"/>
+</a>
+&nbsp;
+<a href="https://doi.org/10.5281/zenodo.18849993">
+  <img src="https://img.shields.io/badge/Paper-Zenodo-blue?style=for-the-badge&logo=zenodo&logoColor=white" alt="Paper" height="28"/>
+</a>
+&nbsp;
+<a href="docs/system_overview.md">
+  <img src="https://img.shields.io/badge/Docs-Read%20More-informational?style=for-the-badge&logo=readthedocs&logoColor=white" alt="Docs" height="28"/>
+</a>
+&nbsp;
+<a href="https://github.com/aliakarma/FinNutriAgent/issues">
+  <img src="https://img.shields.io/badge/Issues-Report%20a%20Bug-red?style=for-the-badge&logo=github&logoColor=white" alt="Issues" height="28"/>
+</a>
+
+<br/><br/>
+
+</div>
 
 ---
 
-## Abstract
+## 📋 Table of Contents
 
-**FinNutriAgent** is an open agentic AI framework that jointly optimizes household meal planning and financial budgets under nutritional, cultural, and economic constraints. It combines Mixed-Integer Linear Programming (MILP), multi-agent reasoning, and large language model (LLM) orchestration to produce weekly meal plans that are cost-effective, nutritionally complete, and halal-compliant. The system is evaluated on a synthetic dataset reflecting realistic conditions in Saudi Arabia, covering 100 households, 500 individuals, and 350 food items with market prices from three major retail chains.
-
-This repository accompanies the research paper:
-
-> **Ali Akarma**, "FinNutriAgent: Agentic AI for Household Nutrition and Budgeting," 2025.  
-> DOI: [10.5281/zenodo.18849993](https://doi.org/10.5281/zenodo.18849993)
-
----
-
-## Key Features
-
-- **Budget-aware planning** — derives weekly food budgets from household financial profiles
-- **Demographic nutrition modeling** — aggregates per-person requirements (age, gender, WHO guidelines)
-- **Multi-store price tracking** — monitors prices across Carrefour, Lulu, and Panda
-- **MILP optimization** — guarantees cost-minimal, nutritionally complete meal plans
-- **Halal compliance** — filters food selections to Islamic dietary law
-- **Dietary diversity** — binary selection variables enforce food variety
-- **Price shock resilience** — triggers re-optimization when market prices shift beyond threshold
-- **Reproducible** — fully deterministic pipeline, all data versioned on Zenodo
+- [Abstract](#-abstract)
+- [Key Features](#-key-features)
+- [System Architecture](#-system-architecture)
+- [MILP Formulation](#-milp-problem-formulation)
+- [Datasets](#-datasets)
+- [Quick Start](#-quick-start)
+- [Results](#-results-summary)
+- [Repository Structure](#-repository-structure)
+- [Citation](#-citation)
+- [License](#-license)
+- [Contributing](#-contributing)
+- [Contact](#-contact)
 
 ---
 
-## Repository Structure
+## 🔬 Abstract
+
+**FinNutriAgent** is an open agentic AI framework that **jointly optimizes household meal planning and financial budgets** under nutritional, cultural, and economic constraints. It combines:
+
+- 🔢 **Mixed-Integer Linear Programming (MILP)** for provably optimal solutions  
+- 🤝 **Multi-agent reasoning** across budget, nutrition, and pricing domains  
+- 🧠 **LLM orchestration** for natural-language explanations and coordination  
+
+The system is evaluated on a **synthetic dataset** reflecting realistic conditions in **Saudi Arabia**, covering **100 households**, **500 individuals**, and **350 food items** with market prices from three major retail chains.
+
+> **Ali Akarma**, *"FinNutriAgent: Agentic AI for Household Nutrition and Budgeting"*, 2025.  
+> 📄 DOI: [10.5281/zenodo.18849993](https://doi.org/10.5281/zenodo.18849993)
+
+---
+
+## ✨ Key Features
+
+| Feature | Description |
+|---|---|
+| 💸 **Budget-aware planning** | Derives weekly food budgets from household financial profiles |
+| 👨‍👩‍👧‍👦 **Demographic nutrition modeling** | Aggregates per-person requirements (age, gender, WHO guidelines) |
+| 🏪 **Multi-store price tracking** | Monitors prices across Carrefour, Lulu, and Panda |
+| ⚙️ **MILP optimization** | Guarantees cost-minimal, nutritionally complete meal plans |
+| ☪️ **Halal compliance** | Filters food selections to Islamic dietary law |
+| 🥦 **Dietary diversity** | Binary selection variables enforce food variety |
+| 📈 **Price shock resilience** | Triggers re-optimization when market prices shift beyond threshold |
+| 🔁 **Reproducible pipeline** | Fully deterministic, all data versioned on Zenodo |
+
+---
+
+## 🏗️ System Architecture
+
+```
+┌──────────────────────────────────────────────────────────────┐
+│                      LLM Orchestrator                        │
+│          (Coordinates agents · Generates explanations)       │
+└────────┬─────────────────┬──────────────────┬───────────────┘
+         │                 │                  │
+   ┌─────▼──────┐   ┌──────▼──────┐   ┌──────▼──────┐
+   │   Budget   │   │  Nutrition  │   │    Price    │
+   │   Agent    │   │    Agent    │   │    Agent    │
+   │            │   │             │   │             │
+   │ financial  │   │ nutrition_  │   │ food_prices │
+   │ _data.csv  │   │ req.csv     │   │ .csv        │
+   └─────┬──────┘   └──────┬──────┘   └──────┬──────┘
+         │                 │                  │
+         └─────────────────▼──────────────────┘
+                    ┌───────────────┐
+                    │  MILP Engine  │
+                    │   (PuLP/CBC)  │
+                    │               │
+                    │ food_         │
+                    │ composition   │
+                    └───────┬───────┘
+                            │
+                    ┌───────▼───────┐
+                    │  Weekly Meal  │
+                    │     Plan      │
+                    └───────────────┘
+```
+
+Three specialized agents feed into a central MILP engine, coordinated by an LLM orchestrator that synthesizes constraints and generates human-readable meal plan explanations.
+
+---
+
+## 📐 MILP Problem Formulation
+
+The optimizer minimizes total weekly food cost while incentivizing dietary diversity:
+
+```
+Minimize:    Σ_f  cost_f · x_f  −  ε · Σ_f y_f
+
+Subject to:
+  Σ_f  (nutrient_{f,n} / 100) · x_f  ≥  target_n     ∀ nutrient n
+  Σ_f  cost_f · x_f                  ≤  weekly_budget
+  Σ_f  y_f                          ≥  min_foods       (dietary variety)
+  min_g · y_f  ≤  x_f  ≤  max_g · y_f                 ∀ food f
+  x_f ≥ 0,   y_f ∈ {0, 1}
+```
+
+| Symbol | Meaning |
+|---|---|
+| `x_f` | Quantity of food `f` (grams/week) — continuous |
+| `y_f` | Binary selection indicator for food `f` |
+| `cost_f` | Cost per gram of food `f` (SAR) |
+| `target_n` | Minimum weekly requirement for nutrient `n` |
+| `ε` | Small diversity incentive weight |
+
+---
+
+## 📊 Datasets
+
+| Dataset | Rows | Key Columns | Description |
+|---|---|---|---|
+| [`financial_data.csv`](data/financial/) | 100 | `user_id`, income, fixed expenses, savings targets | Household financial profiles |
+| [`food_composition.csv`](data/composition/) | 350 | `food_id`, nutrients, `halal` flag | Nutrient content per food item |
+| [`food_prices.csv`](data/prices/) | 350 | `food_id`, Carrefour, Lulu, Panda prices | Per-item prices across 3 stores |
+| [`nutrition_requirements.csv`](data/nutrition/) | 500 | `person_id`, age, gender, daily targets | Per-person nutritional requirements |
+
+> 📖 Full schema documentation: [`docs/dataset_documentation.md`](docs/dataset_documentation.md)  
+> 📋 Dataset card (Gebru et al., 2021): [`docs/data_card.md`](docs/data_card.md)
+
+---
+
+## 🚀 Quick Start
+
+### ☁️ Option A — Google Colab *(Recommended)*
+
+No local setup required. Click below to launch the full demo:
+
+<a href="https://colab.research.google.com/github/aliakarma/FinNutriAgent/blob/main/example/demo_finagent.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a>
+
+---
+
+### 🐍 Option B — Local Setup (pip)
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/aliakarma/FinNutriAgent.git
+cd FinNutriAgent
+
+# 2. Install in editable mode
+pip install -e .
+
+# 3. (Optional) Fully reproducible install with pinned lockfile
+pip install -r requirements.lock.txt
+```
+
+### 🐍 Option C — Local Setup (Conda)
+
+```bash
+git clone https://github.com/aliakarma/FinNutriAgent.git
+cd FinNutriAgent
+conda env create -f environment.yml
+conda activate finnutriagent
+```
+
+---
+
+### ▶️ Run the Demo Notebook
+
+```bash
+jupyter notebook example/demo_finagent.ipynb
+```
+
+### ✅ Validate Data Integrity
+
+```bash
+python scripts/validate_data.py
+```
+
+### ⚙️ Run the Optimizer
+
+```python
+from scripts.optimizer import run_optimization
+
+result = run_optimization(
+    weekly_budget=912.50,
+    nutrient_targets={
+        "calories":   6696,
+        "protein":     158,
+        "vitamin_d":    60,
+        "iron":         44,
+    },
+    halal_only=True,
+)
+
+print(result["status"])           # Optimal
+print(result["total_cost_sar"])   # e.g., 24.73
+print(result["plan"])             # DataFrame with recommended foods + nutrient contributions
+```
+
+### 🧪 Run Tests
+
+```bash
+pytest tests/ -v
+```
+
+---
+
+### 🔁 Reproducibility
+
+To regenerate all core tables and figures from the paper:
+
+```bash
+python scripts/reproduce_results.py
+```
+
+Outputs: `results/summary.csv`, `results/summary_stats.json`, and a sample plan for household `U017`.
+
+For a quick budget sensitivity evaluation:
+
+```bash
+python scripts/evaluate_budget.py
+```
+
+Evaluates household `U017` at a fixed 500 SAR weekly budget and prints cost/utilization with selected foods.
+
+---
+
+## 📈 Results Summary
+
+> Full results: [`RESULTS.md`](RESULTS.md) · Full reproduction: [`example/demo_finagent.ipynb`](example/demo_finagent.ipynb)
+
+The optimizer consistently finds **feasible, cost-minimal halal meal plans** across all 100 households, satisfying all four nutritional constraints while consuming only **3–7% of the available weekly food budget** — demonstrating strong economic efficiency.
+
+---
+
+## 📁 Repository Structure
 
 ```
 FinNutriAgent/
 ├── README.md                         # This file
-├── LICENSE                           # CC BY 4.0
+├── LICENSE                           # MIT (code) / CC BY 4.0 (data & docs)
 ├── requirements.txt                  # Python package dependencies
+├── requirements.lock.txt             # Pinned lockfile for reproducibility
 ├── environment.yml                   # Conda environment specification
 ├── CITATION.cff                      # Machine-readable citation
 ├── CONTRIBUTING.md                   # Contribution guidelines
@@ -68,6 +320,8 @@ FinNutriAgent/
 │   ├── nutrition_agent.py            # Nutritional target aggregation
 │   ├── price_agent.py                # Price loading and volatility detection
 │   ├── optimizer.py                  # MILP optimization engine (PuLP/CBC)
+│   ├── reproduce_results.py          # Full paper result reproduction
+│   ├── evaluate_budget.py            # Budget sensitivity evaluation
 │   └── validate_data.py              # Data integrity validation
 │
 ├── tests/
@@ -86,182 +340,63 @@ FinNutriAgent/
 
 ---
 
-## Datasets
+## 📝 Citation
 
-| Dataset | Rows | Columns | Primary Key | Description |
-|---|---|---|---|---|
-| `financial_data.csv` | 100 | 8 | `user_id` | Household income, fixed expenses, savings targets |
-| `food_composition.csv` | 350 | 7 | `food_id` | Nutrient content + halal compliance per food item |
-| `food_prices.csv` | 350 | 4 | `food_id` | Price per kg across Carrefour, Lulu, Panda |
-| `nutrition_requirements.csv` | 500 | 7 | `person_id` | Per-person daily nutritional requirements |
+If you use FinNutriAgent in your research, please cite:
 
-Full documentation: [`docs/dataset_documentation.md`](docs/dataset_documentation.md)  
-Dataset card: [`docs/data_card.md`](docs/data_card.md)
+```bibtex
+@software{akarma2025finnutriagent,
+  author    = {Ali Akarma},
+  title     = {{FinNutriAgent: Agentic AI for Household Nutrition and Budget Optimization}},
+  year      = {2025},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.18849993},
+  url       = {https://doi.org/10.5281/zenodo.18849993}
+}
+```
+
+Or use the machine-readable [`CITATION.cff`](CITATION.cff).
 
 ---
 
-## System Architecture
-
-```
-┌──────────────────────────────────────────────────────────────┐
-│                      LLM Orchestrator                        │
-│          (Coordinates agents · Generates explanations)       │
-└────────┬─────────────────┬──────────────────┬───────────────┘
-         │                 │                  │
-   ┌─────▼──────┐   ┌──────▼──────┐   ┌──────▼──────┐
-   │   Budget   │   │  Nutrition  │   │    Price    │
-   │   Agent    │   │    Agent    │   │    Agent    │
-   │            │   │             │   │             │
-   │ financial  │   │ nutrition_  │   │ food_prices │
-   │ _data.csv  │   │ req.csv     │   │ .csv        │
-   └─────┬──────┘   └──────┬──────┘   └──────┬──────┘
-         │                 │                  │
-         └─────────────────▼──────────────────┘
-                    ┌───────────────┐
-                    │  MILP Engine  │
-                    │   (PuLP/CBC)  │
-                    │               │
-                    │ food_         │
-                    │ composition   │
-                    └───────┬───────┘
-                            │
-                    ┌───────▼───────┐
-                    │  Weekly Meal  │
-                    │     Plan      │
-                    └───────────────┘
-```
-
----
-
-## MILP Problem Formulation
-
-```
-Minimize:    Σ_f  cost_f · x_f  −  ε · Σ_f y_f
-
-Subject to:
-  Σ_f  (nutrient_{f,n} / 100) · x_f  ≥  target_n     ∀ nutrient n
-  Σ_f  cost_f · x_f                  ≤  weekly_budget
-  Σ_f  y_f                          ≥  min_foods     (dietary variety)
-  min_g · y_f  ≤  x_f  ≤  max_g · y_f                ∀ food f
-  x_f ≥ 0,   y_f ∈ {0, 1}
-```
-
-Where `x_f` (grams/week) is the quantity of food `f`, `y_f` is a binary selection indicator, and `ε` is a small diversity incentive weight.
-
----
-
-## Quick Start
-
-### Option A — Google Colab (Recommended)
-
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/aliakarma/FinNutriAgent/blob/main/example/demo_finagent.ipynb)
-
-### Option B — Local Setup (pip)
-
-```bash
-git clone https://github.com/aliakarma/FinNutriAgent.git
-cd FinNutriAgent
-pip install -e .
-# For fully reproducible installs, use the pinned lockfile:
-pip install -r requirements.lock.txt
-```
-
-### Option C — Local Setup (Conda)
-
-```bash
-git clone https://github.com/aliakarma/FinNutriAgent.git
-cd FinNutriAgent
-conda env create -f environment.yml
-conda activate finnutriagent
-```
-
-### Run the Demo Notebook
-
-```bash
-jupyter notebook example/demo_finagent.ipynb
-```
-
-### Validate Data Integrity
-
-```bash
-python scripts/validate_data.py
-```
-
-### Run the Optimizer
-
-```python
-from scripts.optimizer import run_optimization
-
-result = run_optimization(
-    weekly_budget=912.50,
-    nutrient_targets={"calories": 6696, "protein": 158, "vitamin_d": 60, "iron": 44},
-    halal_only=True,
-)
-print(result["status"])          # Optimal
-print(result["total_cost_sar"])  # e.g., 24.73
-print(result["plan"])            # DataFrame of recommended foods (includes per-item nutrient contributions)
-```
-
-### Run Tests
-
-```bash
-pytest tests/ -v
-```
-
----
-
-## Reproducible Results (Recommended)
-
-To regenerate the core tables and figures from the paper, run the reproducibility script.
-
-```bash
-python scripts/reproduce_results.py
-```
-
-This produces `results/summary.csv`, `results/summary_stats.json`, and a sample output for household `U017`.
-
-### Quick budget sensitivity evaluation
-
-To quickly measure how the optimizer behaves under a fixed weekly budget, run:
-
-```bash
-python scripts/evaluate_budget.py
-```
-
-This evaluates a single example household (U017) with a 500 SAR weekly budget and prints the cost/utilization and selected foods.
-
----
-
-## Results Summary
-
-Key results from the paper are summarized in [`RESULTS.md`](RESULTS.md). The optimizer consistently finds feasible, cost-minimal halal meal plans across all 100 households, using only 3–7% of the available weekly food budget to satisfy all four nutritional constraints. Full results are reproducible via `example/demo_finagent.ipynb`.
-
----
-
-
-
-
----
-
-## License
+## ⚖️ License
 
 | Component | License |
 |---|---|
-| Code (`scripts/`, `tests/`, `example/`) | [MIT License](LICENSE) |
-| Datasets (`data/`) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
-| Documentation (`docs/`) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
+| Code (`scripts/`, `tests/`, `example/`) | [![MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE) |
+| Datasets (`data/`) | [![CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/) |
+| Documentation (`docs/`) | [![CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/) |
 
 ---
 
-## Contributing
+## 🤝 Contributing
 
-Contributions are welcome. Please read [`CONTRIBUTING.md`](CONTRIBUTING.md) before submitting a pull request.
+Contributions are warmly welcome! Please read [`CONTRIBUTING.md`](CONTRIBUTING.md) before submitting a pull request.
+
+[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![Open Issues](https://img.shields.io/github/issues/aliakarma/FinNutriAgent)](https://github.com/aliakarma/FinNutriAgent/issues)
+[![GitHub Stars](https://img.shields.io/github/stars/aliakarma/FinNutriAgent?style=social)](https://github.com/aliakarma/FinNutriAgent)
 
 ---
 
-## Contact
+## 📬 Contact
 
-**Ali Akarma**  
-ORCID: [0009-0002-6687-9380](https://orcid.org/0009-0002-6687-9380)  
-GitHub: [@aliakarma](https://github.com/aliakarma)  
-Issues: [github.com/aliakarma/FinNutriAgent/issues](https://github.com/aliakarma/FinNutriAgent/issues)
+<div align="center">
+
+**Ali Akarma**
+
+[![ORCID](https://img.shields.io/badge/ORCID-0009--0002--6687--9380-a6ce39?style=for-the-badge&logo=orcid&logoColor=white)](https://orcid.org/0009-0002-6687-9380)
+[![GitHub](https://img.shields.io/badge/GitHub-@aliakarma-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/aliakarma)
+[![Issues](https://img.shields.io/badge/Bug%20Reports-Open%20an%20Issue-red?style=for-the-badge&logo=github)](https://github.com/aliakarma/FinNutriAgent/issues)
+
+</div>
+
+---
+
+<div align="center">
+
+*Built with ❤️ for household food security and financial wellbeing.*
+
+[![DOI](https://zenodo.org/badge/1115326129.svg)](https://doi.org/10.5281/zenodo.18849993)
+
+</div>
