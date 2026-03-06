@@ -18,6 +18,7 @@ import sys
 from pathlib import Path
 
 import numpy as np
+import pandas as pd
 
 # Ensure repository root is on sys.path so this script can be run without
 # requiring `pip install -e .`.
@@ -172,7 +173,71 @@ def find_minimum_feasible_budget(
     }
 
 
+def scale_financial_dataset(
+    multiplier: float,
+    input_path: Path,
+    output_path: Path | None = None,
+    overwrite: bool = False,
+):
+    """Scale monetary columns in the financial dataset by a multiplier.
+
+    The budget computation is based on the difference between income and
+    expenses, so scaling all monetary columns preserves relative ratios.
+    """
+    df = pd.read_csv(input_path)
+    money_cols = [
+        "monthly_income",
+        "rent",
+        "utilities",
+        "transport",
+        "education",
+        "healthcare",
+        "savings_target",
+    ]
+    for c in money_cols:
+        if c in df.columns:
+            df[c] = (df[c].astype(float) * multiplier).round(0).astype(int)
+
+    if output_path is None:
+        output_path = input_path
+
+    if output_path.exists() and not overwrite and output_path != input_path:
+        raise FileExistsError(f"Output path already exists: {output_path}")
+
+    df.to_csv(output_path, index=False)
+    return output_path
+
+
 def main():
+    import argparse
+
+    parser = argparse.ArgumentParser(description="Stress test and optional dataset scaling for FinNutriAgent.")
+    parser.add_argument(
+        "--apply-scaling",
+        action="store_true",
+        help="Scale the financial dataset using the computed minimum feasible multiplier.",
+    )
+    parser.add_argument(
+        "--output",
+        type=str,
+        default=None,
+        help="File path to write the scaled financial dataset (default: overwrite input file if --apply-scaling).",
+    )
+    parser.add_argument(
+        "--user-id",
+        type=str,
+        default="U017",
+        help="Household user_id to use for the scaling computation.",
+    )
+    parser.add_argument(
+        "--members",
+        type=str,
+        default="P1,P2,P3,P4",
+        help="Comma-separated person_ids for the household used in nutrient targeting.",
+    )
+
+    args = parser.parse_args()
+
     results_dir = ROOT / "results"
     _ensure_results_dir(results_dir)
 
@@ -180,8 +245,8 @@ def main():
     nutrition_agent = NutritionAgent()
     food_df = load_merged_food_data(halal_only=True)
 
-    user_id = "U017"
-    members = ["P1", "P2", "P3", "P4"]
+    user_id = args.user_id
+    members = [m.strip() for m in args.members.split(",") if m.strip()]
 
     budget = budget_agent.get_weekly_budget(user_id)
     nutrient_targets = nutrition_agent.get_household_weekly_targets(members)
@@ -252,32 +317,20 @@ def main():
     print("Stress test completed. Results saved to:")
     print(f"  - {results_dir / 'stress_test.json'}")
 
-    # 2) Diversity incentive impact
-    for eps in [0.0, 0.01, 0.1]:
-        r = run_optimization(
-            weekly_budget=budget,
-            nutrient_targets=nutrient_targets,
-            food_df=food_df,
-            epsilon=eps,
+    if args.apply_scaling:
+        multiplier = results["budget_scaling"]["multiplier"]
+        if multiplier is None:
+            raise RuntimeError("No feasible budget multiplier found; cannot scale dataset.")
+
+        input_path = ROOT / "data" / "financial" / "financial_data.csv"
+        output_path = Path(args.output) if args.output else input_path
+        scaled_path = scale_financial_dataset(
+            multiplier=multiplier,
+            input_path=input_path,
+            output_path=output_path,
+            overwrite=(output_path == input_path),
         )
-        results["diversity_impact"][f"epsilon_{eps}"] = {
-            "epsilon": eps,
-            "status": r["status"],
-            "total_cost_sar": r["total_cost_sar"],
-            "n_foods_selected": r["n_foods_selected"],
-            "nutrient_achieved": r["nutrient_achieved"],
-        }
-
-    # 3) Greedy baseline comparison (no budget constraint; shows what the optimizer saves)
-    greedy = greedy_baseline(nutrient_targets, food_df)
-    results["baseline_comparison"]["greedy"] = greedy
-
-    # Save
-    with open(results_dir / "stress_test.json", "w", encoding="utf-8") as f:
-        json.dump(results, f, indent=2)
-
-    print("Stress test completed. Results saved to:")
-    print(f"  - {results_dir / 'stress_test.json'}")
+        print(f"Scaled financial dataset written to: {scaled_path}")
 
 
 if __name__ == "__main__":
