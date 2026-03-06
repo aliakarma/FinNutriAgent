@@ -4,7 +4,7 @@
 <img src="https://raw.githubusercontent.com/aliakarma/FinNutriAgent/main/docs/assets/banner.png" alt="FinNutriAgent Banner" width="100%" onerror="this.style.display='none'"/>
 
 <h1>
-  🥗💰 FinNutriAgent
+  💰 FinNutriAgent 🥗
 </h1>
 
 <h3><em>Agentic AI for Household Nutrition and Budget Optimization</em></h3>
