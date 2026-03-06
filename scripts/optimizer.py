@@ -162,24 +162,12 @@ def run_optimization(
     solver = PULP_CBC_CMD(msg=1 if verbose else 0)
     prob.solve(solver)
 
-    status = LpStatus[prob.status]
-    if status != "Optimal":
-        return {
-            "status": status,
-            "total_cost_sar": None,
-            "budget_sar": weekly_budget,
-            "nutrient_targets": nutrient_targets,
-            "nutrient_achieved": {},
-            "n_foods_selected": 0,
-            "plan": pd.DataFrame(),
-        }
-
     # Collect plan
     plan_rows, total_cost = [], 0.0
     for f in food_ids:
         val = x[f].varValue or 0.0
         if val > 1e-4:
-            item_cost = val * costs[f]
+            item_cost  = val * costs[f]
             total_cost += item_cost
             name = food_df.loc[food_df["food_id"] == f, "food_name"].values[0]
             plan_rows.append({
@@ -201,7 +189,7 @@ def run_optimization(
         nutrient_achieved[nut_key] = round(achieved, 2)
 
     return {
-        "status":            status,
+        "status":            LpStatus[prob.status],
         "total_cost_sar":    round(total_cost, 2),
         "budget_sar":        weekly_budget,
         "nutrient_targets":  nutrient_targets,
