@@ -47,3 +47,7 @@ Thumbs.db
 *.pdf
 !docs/*.png
 !docs/*.pdf
+
+# Generated results
+results/
+!results/.gitkeep

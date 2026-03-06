@@ -160,7 +160,9 @@ Where `x_f` (grams/week) is the quantity of food `f`, `y_f` is a binary selectio
 ```bash
 git clone https://github.com/aliakarma/FinNutriAgent.git
 cd FinNutriAgent
-pip install -r requirements.txt
+pip install -e .
+# For fully reproducible installs, use the pinned lockfile:
+pip install -r requirements.lock.txt
 ```
 
 ### Option C — Local Setup (Conda)
@@ -204,6 +206,18 @@ print(result["plan"])            # DataFrame of recommended foods
 ```bash
 pytest tests/ -v
 ```
+
+---
+
+## Reproducible Results (Recommended)
+
+To regenerate the core tables and figures from the paper, run the reproducibility script.
+
+```bash
+python scripts/reproduce_results.py
+```
+
+This produces `results/summary.csv`, `results/summary_stats.json`, and a sample output for household `U017`.
 
 ---
 

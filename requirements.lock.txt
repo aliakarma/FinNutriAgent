@@ -1,0 +1,13 @@
+# Pinned dependency versions (generated from current environment)
+# Use this file to reproduce results reliably.
+
+pandas==2.2.2
+numpy==1.26.4
+PuLP==3.3.0
+matplotlib==3.8.4
+seaborn==0.13.2
+jupyter==1.0.0
+ipykernel==6.29.4
+PyYAML==6.0.1
+pytest==8.1.1
+pytest-cov==5.0.0
