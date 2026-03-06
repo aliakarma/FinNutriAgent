@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # FinNutriAgent: Agentic AI for Household Nutrition and Budget Optimization
 
 [![DOI](https://zenodo.org/badge/1115326129.svg)](https://doi.org/10.5281/zenodo.18849993)
@@ -15,7 +14,7 @@
 
 This repository accompanies the research paper:
 
-> **Ali Akarma**, "FinNutriAgent: Agentic AI for Household Nutrition and Budgeting," *[Journal Name]*, 2025.  
+> **Ali Akarma**, "FinNutriAgent: Agentic AI for Household Nutrition and Budgeting," 2025.  
 > DOI: [10.5281/zenodo.18849993](https://doi.org/10.5281/zenodo.18849993)
 
 ---
@@ -216,20 +215,8 @@ Key results from the paper are summarized in [`RESULTS.md`](RESULTS.md). The opt
 
 ---
 
-## Citation
 
-If you use FinNutriAgent or its datasets in your research, please cite:
 
-```bibtex
-@misc{akarma2025finnutriagent,
-  author       = {Ali Akarma},
-  title        = {FinNutriAgent: Agentic AI for Household Nutrition and Budgeting},
-  year         = {2025},
-  publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.18849993},
-  url          = {https://doi.org/10.5281/zenodo.18849993}
-}
-```
 
 ---
 
@@ -275,4 +262,3 @@ FinAgent is an agentic AI system that jointly optimizes household meal planning 
 1. Clone this repo.
 2. Open `examples/demo_finagent.ipynb` in Google Colab.
 3. Run cells sequentially to see sample recommendations.
->>>>>>> f9098430481c9bbf225fbfb7aeaa02acf3cea53f
