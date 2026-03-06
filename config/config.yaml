@@ -17,6 +17,7 @@ budget:
 optimizer:
   min_grams: 50                  # Min weekly grams per selected food item
   max_grams: 500                 # Max weekly grams per selected food item
+  min_foods: 3                   # Minimum distinct food items to include in plan
   diversity_epsilon: 0.01        # Weight for diversity incentive in objective
   halal_only: true               # Filter to halal-compliant foods
   solver: CBC                    # PuLP solver (CBC is bundled)

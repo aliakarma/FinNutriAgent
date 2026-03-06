@@ -48,6 +48,11 @@ def test_optimizer_plan_is_dataframe(minimal_food_df):
     assert "food_name" in result["plan"].columns
     assert "grams_per_week" in result["plan"].columns
     assert "cost_sar" in result["plan"].columns
+    # Nutrient contributions per food item should be included.
+    assert "calories" in result["plan"].columns
+    assert "protein" in result["plan"].columns
+    assert "vitamin_d" in result["plan"].columns
+    assert "iron" in result["plan"].columns
 
 
 def test_optimizer_cost_within_budget(minimal_food_df):

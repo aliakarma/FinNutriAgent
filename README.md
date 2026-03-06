@@ -141,6 +141,7 @@ Minimize:    Σ_f  cost_f · x_f  −  ε · Σ_f y_f
 Subject to:
   Σ_f  (nutrient_{f,n} / 100) · x_f  ≥  target_n     ∀ nutrient n
   Σ_f  cost_f · x_f                  ≤  weekly_budget
+  Σ_f  y_f                          ≥  min_foods     (dietary variety)
   min_g · y_f  ≤  x_f  ≤  max_g · y_f                ∀ food f
   x_f ≥ 0,   y_f ∈ {0, 1}
 ```
@@ -198,7 +199,7 @@ result = run_optimization(
 )
 print(result["status"])          # Optimal
 print(result["total_cost_sar"])  # e.g., 24.73
-print(result["plan"])            # DataFrame of recommended foods
+print(result["plan"])            # DataFrame of recommended foods (includes per-item nutrient contributions)
 ```
 
 ### Run Tests

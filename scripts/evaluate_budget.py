@@ -35,7 +35,10 @@ def evaluate_weekly_budget(user_id: str, members: list[str], weekly_budget: floa
         print(f"  {k}: {v:.1f}/{t:.1f} ({v/t*100:.1f}%)")
 
     print('\nTop items (by cost):')
-    print(result['plan'].head(10).to_string(index=False))
+    # Include per-item nutrient contributions for transparency.
+    nutrient_cols = [c for c in ['calories', 'protein', 'vitamin_d', 'iron'] if c in result['plan'].columns]
+    display_cols = ['food_name', 'grams_per_week', 'cost_sar'] + nutrient_cols
+    print(result['plan'][display_cols].head(10).to_string(index=False))
 
 
 if __name__ == '__main__':
