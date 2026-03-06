@@ -1,0 +1,51 @@
+# FinNutriAgent — Central Configuration
+# All paths are relative to the repository root.
+# Override any value by passing it directly to the relevant class/function.
+
+# ── Data paths ────────────────────────────────────────────────────────────────
+data:
+  financial:   data/financial/financial_data.csv
+  composition: data/composition/food_composition.csv
+  prices:      data/prices/food_prices.csv
+  nutrition:   data/nutrition/nutrition_requirements.csv
+
+# ── Budget Agent ──────────────────────────────────────────────────────────────
+budget:
+  weeks_per_month: 4.33          # Average weeks in a calendar month
+
+# ── Optimization Engine ───────────────────────────────────────────────────────
+optimizer:
+  min_grams: 50                  # Min weekly grams per selected food item
+  max_grams: 500                 # Max weekly grams per selected food item
+  diversity_epsilon: 0.01        # Weight for diversity incentive in objective
+  halal_only: true               # Filter to halal-compliant foods
+  solver: CBC                    # PuLP solver (CBC is bundled)
+  solver_verbose: false
+
+# ── Nutrients tracked ─────────────────────────────────────────────────────────
+# Keys must match the column suffix used in the optimizer's NUTRIENT_COLS dict.
+nutrients:
+  calories:
+    column: calories_per_100g
+    unit: kcal
+  protein:
+    column: protein_g
+    unit: g
+  vitamin_d:
+    column: vitamin_d_mcg
+    unit: mcg
+  iron:
+    column: iron_mg
+    unit: mg
+
+# ── Price Agent ───────────────────────────────────────────────────────────────
+price_agent:
+  volatility_threshold: 0.15     # Fractional change that triggers re-planning
+
+# ── Validation ────────────────────────────────────────────────────────────────
+validation:
+  expected_rows:
+    financial:   100
+    composition: 350
+    prices:      350
+    nutrition:   500

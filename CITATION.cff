@@ -1,0 +1,41 @@
+cff-version: 1.2.0
+message: "If you use this software or dataset, please cite it as below."
+type: software
+title: "FinNutriAgent: Agentic AI for Household Nutrition and Budgeting"
+authors:
+  - family-names: Akarma
+    given-names: Ali
+    orcid: "https://orcid.org/0009-0002-6687-9380"
+year: 2025
+version: "1.0.0"
+doi: 10.5281/zenodo.18849993
+url: "https://github.com/aliakarma/FinNutriAgent"
+repository-code: "https://github.com/aliakarma/FinNutriAgent"
+license: CC-BY-4.0
+abstract: >
+  FinNutriAgent is an agentic AI framework that jointly optimizes household
+  meal planning and financial budgets under nutritional, cultural, and
+  economic constraints. It combines Mixed-Integer Linear Programming,
+  multi-agent reasoning, and LLM orchestration to produce cost-effective,
+  nutritionally complete, halal-compliant weekly meal plans evaluated on
+  a synthetic dataset reflecting realistic Saudi Arabian household conditions.
+keywords:
+  - agentic AI
+  - meal planning
+  - nutritional optimization
+  - household budgeting
+  - linear programming
+  - halal diet
+  - Saudi Arabia
+  - food security
+  - multi-agent systems
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Akarma
+      given-names: Ali
+      orcid: "https://orcid.org/0009-0002-6687-9380"
+  title: "FinNutriAgent: Agentic AI for Household Nutrition and Budgeting"
+  year: 2025
+  doi: 10.5281/zenodo.18849993
+  url: "https://github.com/aliakarma/FinNutriAgent"
