@@ -3,8 +3,6 @@
 [![DOI](https://zenodo.org/badge/1115326129.svg)](https://doi.org/10.5281/zenodo.18849993)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![CI](https://github.com/aliakarma/FinNutriAgent/actions/workflows/ci.yml/badge.svg)](https://github.com/aliakarma/FinNutriAgent/actions/workflows/ci.yml)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/aliakarma/FinNutriAgent/blob/main/example/demo_finagent.ipynb)
 
 ---
 
