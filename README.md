@@ -140,24 +140,33 @@ Three specialized agents feed into a central MILP engine, coordinated by an LLM 
 
 The optimizer minimizes total weekly food cost while incentivizing dietary diversity:
 
-```
-Minimize:    Σ_f  cost_f · x_f  −  ε · Σ_f y_f
+**Objective Function**
 
-Subject to:
-  Σ_f  (nutrient_{f,n} / 100) · x_f  ≥  target_n     ∀ nutrient n
-  Σ_f  cost_f · x_f                  ≤  weekly_budget
-  Σ_f  y_f                          ≥  min_foods       (dietary variety)
-  min_g · y_f  ≤  x_f  ≤  max_g · y_f                 ∀ food f
-  x_f ≥ 0,   y_f ∈ {0, 1}
-```
+$$\min_{x_f,\, y_f} \sum_{f} c_f \cdot x_f \;-\; \varepsilon \sum_{f} y_f$$
 
-| Symbol | Meaning |
-|---|---|
-| `x_f` | Quantity of food `f` (grams/week) — continuous |
-| `y_f` | Binary selection indicator for food `f` |
-| `cost_f` | Cost per gram of food `f` (SAR) |
-| `target_n` | Minimum weekly requirement for nutrient `n` |
-| `ε` | Small diversity incentive weight |
+**Subject to**
+
+$$\sum_{f} \frac{n_{f,k}}{100} \cdot x_f \;\geq\; T_k \qquad \forall \text{ nutrient } k$$
+
+$$\sum_{f} c_f \cdot x_f \;\leq\; B_{\text{weekly}}$$
+
+$$\sum_{f} y_f \;\geq\; F_{\min}$$
+
+$$g_{\min} \cdot y_f \;\leq\; x_f \;\leq\; g_{\max} \cdot y_f \qquad \forall f$$
+
+$$x_f \geq 0, \quad y_f \in \{0, 1\} \qquad \forall f$$
+
+**Variables & Parameters**
+
+| Symbol | Type | Description |
+|:---:|:---:|---|
+| $x_f$ | Continuous | Grams of food $f$ per week |
+| $y_f$ | Binary | 1 if food $f$ is selected, 0 otherwise |
+| $c_f$ | Parameter | Cost per gram of food $f$ (SAR) |
+| $T_k$ | Parameter | Minimum weekly requirement for nutrient $k$ |
+| $B_{\text{weekly}}$ | Parameter | Household weekly food budget (SAR) |
+| $\varepsilon$ | Parameter | Diversity incentive weight |
+| $g_{\min},\, g_{\max}$ | Parameter | Minimum/maximum serving bounds (grams) |
 
 ---
 
