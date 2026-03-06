@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Dataset Documentation — FinNutriAgent
 
 Field-level schema, value ranges, and inter-dataset relationships.
@@ -138,36 +137,6 @@ python scripts/validate_data.py
 ```
 
 Checks: row counts, missing values, food_id key consistency, numeric ranges, categorical field values, budget feasibility.
-=======
-# Dataset Documentation for FinAgent
-
-This document provides detailed descriptions of all datasets used in the FinAgent system. These datasets support nutritional optimization, household budgeting, and price-sensitive dietary planning.
-
----
-
-## 1. Overview of Datasets
-
-The repository contains four primary datasets stored in CSV format:
-
-1. **financial_data.csv**  
-2. **food_composition.csv**  
-3. **food_prices.csv**  
-4. **nutrition_requirements.csv**
-
-The datasets are synthetic but constructed to reflect realistic conditions in Saudi Arabia, including common food items, typical household incomes, and nutrient requirements based on established guidelines.
-
-All files follow tabular, machine-readable formatting and are designed for reproducibility.
-
----
-
-## 2. Dataset Descriptions
-
-### **2.1 financial_data.csv**
-
-| Attribute | Description |
-|----------|-------------|
-| `user_id` | Unique household identifier |
-| `monthly_income` | Monthly income in SAR |
 | `rent` | Monthly rent cost |
 | `utilities` | Electricity, water, and other utilities |
 | `transport` | Transportation cost |
@@ -262,4 +231,3 @@ The datasets are released under **CC BY 4.0**, allowing reuse with proper attrib
 ## 6. Citation
 
 If you use this dataset, please cite the associated research paper or this repository.
->>>>>>> f9098430481c9bbf225fbfb7aeaa02acf3cea53f

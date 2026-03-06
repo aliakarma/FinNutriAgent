@@ -11,7 +11,7 @@ from scripts.budget_agent import BudgetAgent, EXPENSE_COLUMNS
 def sample_csv(tmp_path):
     """Write a minimal financial_data.csv to a temp location."""
     data = pd.DataFrame([
-        {"user_id": "U001", "monthly_income": 10000,
+        {"user_id": "U001", "monthly_income": 11000,
          "rent": 3000, "utilities": 800, "transport": 1200,
          "education": 2000, "healthcare": 300, "savings_target": 2700},
         {"user_id": "U002", "monthly_income": 5000,

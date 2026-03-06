@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Python
 __pycache__/
 *.py[cod]
@@ -48,9 +47,3 @@ Thumbs.db
 *.pdf
 !docs/*.png
 !docs/*.pdf
-=======
-__pycache__/
-.ipynb_checkpoints/
-*.pyc
-.DS_Store
->>>>>>> f9098430481c9bbf225fbfb7aeaa02acf3cea53f
