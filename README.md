@@ -12,7 +12,7 @@
 <br/>
 
 <!-- BADGES ROW 1 — Identity & Citation -->
-[![DOI](https://zenodo.org/badge/1115326129.svg)](https://doi.org/10.5281/zenodo.18849993)
+[![DOI](https://zenodo.org/badge/1115326129.svg)](https://doi.org/10.5281/zenodo.19078004)
 [![License: MIT](https://img.shields.io/badge/Code-MIT-green.svg)](LICENSE)
 [![License: CC BY 4.0](https://img.shields.io/badge/Data%20%26%20Docs-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![ORCID](https://img.shields.io/badge/ORCID-0009--0002--6687--9380-a6ce39?logo=orcid&logoColor=white)](https://orcid.org/0009-0002-6687-9380)
@@ -36,7 +36,7 @@
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" height="28"/>
 </a>
 &nbsp;
-<a href="https://doi.org/10.5281/zenodo.18849993">
+<a href="https://doi.org/10.5281/zenodo.19078004">
   <img src="https://img.shields.io/badge/Paper-Zenodo-blue?style=for-the-badge&logo=zenodo&logoColor=white" alt="Paper" height="28"/>
 </a>
 &nbsp;
@@ -82,7 +82,7 @@
 The system is evaluated on a **synthetic dataset** reflecting realistic conditions in **Saudi Arabia**, covering **100 households**, **500 individuals**, and **350 food items** with market prices from three major retail chains.
 
 > **Ali Akarma**, *"FinNutriAgent: Agentic AI for Household Nutrition and Budgeting"*, 2025.  
-> 📄 DOI: [10.5281/zenodo.18849993](https://doi.org/10.5281/zenodo.18849993)
+> 📄 DOI: [10.5281/zenodo.19078004](https://doi.org/10.5281/zenodo.19078004)
 
 ---
 
@@ -406,6 +406,6 @@ Contributions are warmly welcome! Please read [`CONTRIBUTING.md`](CONTRIBUTING.m
 
 *Built with ❤️ for household food security and financial wellbeing.*
 
-[![DOI](https://zenodo.org/badge/1115326129.svg)](https://doi.org/10.5281/zenodo.18849993)
+[![DOI](https://zenodo.org/badge/1115326129.svg)](https://doi.org/10.5281/zenodo.19078004)
 
 </div>
